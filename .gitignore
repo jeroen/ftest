@@ -1,0 +1,11 @@
+.DS_Store
+.Rproj.user
+.Rhistory
+.RData
+src/*.o
+src/*/*.o
+src/*.so
+src/*.dll
+src/*.exe
+src/hello
+inst
