@@ -6,9 +6,9 @@ LIB = lib/hello.o
 all: clean $(PROG)
 
 $(PROG): $(LIB)
-	$(F77) $(FFLAGS) $(LIB) -o $(PROG)
+	$(FC) $(FCLAGS) $(FPICFLAGS) $(LIB) -o $(PROG)
 	mkdir -p $(INSTDIR)/bin
 	cp -f $(PROG) $(INSTDIR)/bin/
 
 clean:
-	rm -Rf $(LIB) $(SHLIB) $(PROG)
+	rm -Rf $(LIB) $(SHLIB) $(PROG) $(OBJECTS)
